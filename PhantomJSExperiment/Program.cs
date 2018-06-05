@@ -14,7 +14,7 @@ namespace PhantomJSExperiment
             driver.Navigate ().GoToUrl ("https://bing.com");
 
             IWebElement searchField = driver.FindElementById("sb_form_q");
-            searchField.SendKeys ("Jemima Andria");
+            searchField.SendKeys ("Noodles");
             IWebElement btnSearch = driver.FindElementById("sb_form_go");
             btnSearch.Click ();
             driver.GetScreenshot().SaveAsFile("screenshot.png", ScreenshotImageFormat.Png);
