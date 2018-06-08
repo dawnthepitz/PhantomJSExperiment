@@ -11,13 +11,11 @@ namespace PhantomJSExperiment
         {
             PhantomJSDriver driver = new PhantomJSDriver();
             driver.Manage().Window.Maximize();
-            driver.Navigate ().GoToUrl ("https://bing.com");
-
-            IWebElement searchField = driver.FindElementById("sb_form_q");
-            searchField.SendKeys ("Noodles");
-            IWebElement btnSearch = driver.FindElementById("sb_form_go");
-            btnSearch.Click ();
-            driver.GetScreenshot().SaveAsFile("screenshot.png", ScreenshotImageFormat.Png);
+            driver.Navigate().GoToUrl("http://sampleapp.tricentis.com/101/");
+            driver.GetScreenshot().SaveAsFile("screenshot1.png", ScreenshotImageFormat.Png);
+            IWebElement btnTruck = driver.FindElementById("nav_truck");
+            btnTruck.Click();
+            driver.GetScreenshot().SaveAsFile("screenshot2.png", ScreenshotImageFormat.Png);
             driver.Quit();
         }
     }
